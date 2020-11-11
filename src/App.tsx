@@ -1,51 +1,52 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import classnames from 'classnames';
-import Container from '@material-ui/core/Container';
-import { Grid, Paper } from '@material-ui/core';
-import AddIcon from '@material-ui/icons/Add';
+import React from "react";
+import Button from "@material-ui/core/Button";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import classnames from "classnames";
+import Container from "@material-ui/core/Container";
+import { Grid, Paper } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     header: {
-      display: 'flex',
-      alignItems: 'center',
-      backgroundColor: '#026AA7',
-      position: 'relative',
-      minHeight: '7vh',
+      display: "flex",
+      alignItems: "center",
+      backgroundColor: "#026AA7",
+      position: "relative",
+      minHeight: "7vh",
+      justifyContent: "center",
     },
     header__button: {
-      color: '#FFFFFF',
-      backgroundColor: '#4E97C2',
+      color: "#FFFFFF",
+      backgroundColor: "#4E97C2",
       margin: theme.spacing(1),
-      display: 'flex',
-      alignItems: 'center',
+      display: "flex",
+      alignItems: "center",
     },
     button: {
-      display: 'flex',
-      alignItems: 'center',
-      '&:hover': {
-        background: '#0079bf',
+      display: "flex",
+      alignItems: "center",
+      "&:hover": {
+        background: "#0079bf",
       },
     },
     button__svg: {
       width: 20,
     },
     header__logo: {
-      flex: '1 1 100%',
-      cursor: 'pointer',
-      color: '#80B4D3',
-      display: 'flex',
+      flex: "1 1 100%",
+      cursor: "pointer",
+      color: "#80B4D3",
+      display: "flex",
       paddingRight: 100,
-      alignItems: 'center',
-      backgroundColor: '#026AA7',
-      border: 'none',
-      boxShadow: 'none',
-      transition: 'color 0.5s ease',
-      '&:hover': {
-        background: '#0079bf',
-        color: '#ffff',
+      alignItems: "center",
+      backgroundColor: "#026AA7",
+      border: "none",
+      boxShadow: "none",
+      transition: "color 0.5s ease",
+      "&:hover": {
+        background: "#0079bf",
+        color: "#ffff",
       },
     },
     logo__svg: {
@@ -57,26 +58,26 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     body__title: {
       marginTop: 30,
-      display: 'flex',
-      alignItems: 'center',
-      '& span': {
-        color: '#42526E',
+      display: "flex",
+      alignItems: "center",
+      "& span": {
+        color: "#42526E",
         fontSize: 20,
       },
-      '& svg': {
+      "& svg": {
         width: 26,
-        color: '#42526E',
+        color: "#42526E",
         marginRight: 10,
       },
     },
     body__paper: {
       marginTop: 50,
-      backgroundColor: '#026AA7',
+      backgroundColor: "#026AA7",
       height: 100,
       padding: 20,
     },
     body__text: {
-      color: '#ffffff',
+      color: "#ffffff",
       fontSize: 17,
     },
     tables__text: {
@@ -87,10 +88,10 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: 5,
     },
     tables__item: {
-      backgroundColor: '#EBECF0',
-      boxShadow: 'none',
+      backgroundColor: "#EBECF0",
+      boxShadow: "none",
       padding: 10,
-      '& p': {
+      "& p": {
         margin: 0,
         marginBottom: 12,
         fontSize: 15,
@@ -98,35 +99,35 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     item__task: {
-      display: 'flex',
-      justifyContent: 'left',
-      alignItems: 'center',
-      width: '100%',
+      display: "flex",
+      justifyContent: "left",
+      alignItems: "center",
+      width: "100%",
       marginBottom: 12,
-      backgroundColor: '#FFFFFF',
+      backgroundColor: "#FFFFFF",
       padding: 0,
-      '& :hover': {
-        backgroundColor: '#EAECF0',
-        border: 'none',
+      "& :hover": {
+        backgroundColor: "#EAECF0",
+        border: "none",
       },
-      '& span': {
+      "& span": {
         fontWeight: 400,
-        padding: '5px 20px',
+        padding: "5px 20px",
       },
     },
 
     item__button: {
-      display: 'flex',
-      alignItems: 'center',
+      display: "flex",
+      alignItems: "center",
 
-      width: '100%',
-      '& span': {
+      width: "100%",
+      "& span": {
         fontSize: 14,
         fontWeight: 400,
-        textTransform: 'none',
+        textTransform: "none",
       },
     },
-  }),
+  })
 );
 
 function App() {
@@ -145,15 +146,23 @@ function App() {
               focusable="false"
               data-prefix="fab"
               data-icon="trello"
-              className={classnames('svg-inline--fa', 'fa-trello', 'fa-w-14', classes.button__svg)}
+              className={classnames(
+                "svg-inline--fa",
+                "fa-trello",
+                "fa-w-14",
+                classes.button__svg
+              )}
               role="img"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512">
+              viewBox="0 0 448 512"
+            >
               <path
                 fill="currentColor"
-                d="M392.3 32H56.1C25.1 32 0 57.1 0 88c-.1 0 0-4 0 336 0 30.9 25.1 56 56 56h336.2c30.8-.2 55.7-25.2 55.7-56V88c.1-30.8-24.8-55.8-55.6-56zM197 371.3c-.2 14.7-12.1 26.6-26.9 26.6H87.4c-14.8.1-26.9-11.8-27-26.6V117.1c0-14.8 12-26.9 26.9-26.9h82.9c14.8 0 26.9 12 26.9 26.9v254.2zm193.1-112c0 14.8-12 26.9-26.9 26.9h-81c-14.8 0-26.9-12-26.9-26.9V117.2c0-14.8 12-26.9 26.8-26.9h81.1c14.8 0 26.9 12 26.9 26.9v142.1z"></path>
+                d="M392.3 32H56.1C25.1 32 0 57.1 0 88c-.1 0 0-4 0 336 0 30.9 25.1 56 56 56h336.2c30.8-.2 55.7-25.2 55.7-56V88c.1-30.8-24.8-55.8-55.6-56zM197 371.3c-.2 14.7-12.1 26.6-26.9 26.6H87.4c-14.8.1-26.9-11.8-27-26.6V117.1c0-14.8 12-26.9 26.9-26.9h82.9c14.8 0 26.9 12 26.9 26.9v254.2zm193.1-112c0 14.8-12 26.9-26.9 26.9h-81c-14.8 0-26.9-12-26.9-26.9V117.2c0-14.8 12-26.9 26.8-26.9h81.1c14.8 0 26.9 12 26.9 26.9v142.1z"
+              ></path>
             </svg>
-          }>
+          }
+        >
           Доски
         </Button>
         <Button
@@ -166,15 +175,23 @@ function App() {
               focusable="false"
               data-prefix="fab"
               data-icon="trello"
-              className={classnames('svg-inline--fa', 'fa-trello', 'fa-w-14', classes.logo__svg)}
+              className={classnames(
+                "svg-inline--fa",
+                "fa-trello",
+                "fa-w-14",
+                classes.logo__svg
+              )}
               role="img"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512">
+              viewBox="0 0 448 512"
+            >
               <path
                 fill="currentColor"
-                d="M392.3 32H56.1C25.1 32 0 57.1 0 88c-.1 0 0-4 0 336 0 30.9 25.1 56 56 56h336.2c30.8-.2 55.7-25.2 55.7-56V88c.1-30.8-24.8-55.8-55.6-56zM197 371.3c-.2 14.7-12.1 26.6-26.9 26.6H87.4c-14.8.1-26.9-11.8-27-26.6V117.1c0-14.8 12-26.9 26.9-26.9h82.9c14.8 0 26.9 12 26.9 26.9v254.2zm193.1-112c0 14.8-12 26.9-26.9 26.9h-81c-14.8 0-26.9-12-26.9-26.9V117.2c0-14.8 12-26.9 26.8-26.9h81.1c14.8 0 26.9 12 26.9 26.9v142.1z"></path>
+                d="M392.3 32H56.1C25.1 32 0 57.1 0 88c-.1 0 0-4 0 336 0 30.9 25.1 56 56 56h336.2c30.8-.2 55.7-25.2 55.7-56V88c.1-30.8-24.8-55.8-55.6-56zM197 371.3c-.2 14.7-12.1 26.6-26.9 26.6H87.4c-14.8.1-26.9-11.8-27-26.6V117.1c0-14.8 12-26.9 26.9-26.9h82.9c14.8 0 26.9 12 26.9 26.9v254.2zm193.1-112c0 14.8-12 26.9-26.9 26.9h-81c-14.8 0-26.9-12-26.9-26.9V117.2c0-14.8 12-26.9 26.8-26.9h81.1c14.8 0 26.9 12 26.9 26.9v142.1z"
+              ></path>
             </svg>
-          }>
+          }
+        >
           <span className={classes.logo__text}>Trello</span>
         </Button>
       </header>
